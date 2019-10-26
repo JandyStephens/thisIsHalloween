@@ -13,7 +13,7 @@ import img9 from './Images/9.jpg';
 import img10 from './Images/10.jpg';
 import img11 from './Images/11.jpg';
 import img12 from './Images/12.jpg';
-import ScaryCards from './Components/ScaryCards.js'
+import ScaryCards from './Components/ScaryCards.js/index.js'
 
 const tileImages = [
   img1,
