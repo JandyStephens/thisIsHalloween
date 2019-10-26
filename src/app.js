@@ -41,12 +41,15 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          {/* <ScaryCards src={img1} /> */}
+        </header>
+        <main className="grid-container">
           {images.map(image => {
             return <ScaryCards src={image} />
           })}
-
-        </header>
+        </main>
+        <aside>
+          Jandy is coding!
+        </aside>
       </div>
     );
   }

@@ -1,7 +1,23 @@
+html, body, .App, #root {
+    height: 100%;
+    width: 100%;
+}
+
 html{
     background-image: url("./Images/smokeBkground.jpg");
     /* background-repeat: no-repeat; */
     background-size: cover;
-    height: 100%;
-    width: 100%;
 }
+
+.grid-container{
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    margin-right: 10%
+}
+
+.App {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
