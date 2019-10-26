@@ -15,7 +15,7 @@ import img11 from './Images/11.jpg';
 import img12 from './Images/12.jpg';
 import ScaryCards from './Components/ScaryCards.js'
 
-const images = [
+const tileImages = [
   img1,
   img2,
   img3,
@@ -30,12 +30,32 @@ const images = [
   img12
 ]
 
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+
+    // swap elements array[i] and array[j]
+    // we use "destructuring assignment" syntax to achieve that
+    // you'll find more details about that syntax in later chapters
+    // same can be written as:
+    // let t = array[i]; array[i] = array[j]; array[j] = t
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 class App extends React.Component {
   state = {
     score: 0,
-    totalScore: 0,
-    imgs: images
+    topScore: 0,
+    images: tileImages
   };
+
+  handleOnClick = (event) => {
+    const imagesCopy = [...this.state.images]
+    shuffle(imagesCopy);
+    this.setState({ images: imagesCopy })
+  }
+
 
   render() {
     return (
@@ -43,8 +63,8 @@ class App extends React.Component {
         <header className="App-header">
         </header>
         <main className="grid-container">
-          {images.map(image => {
-            return <ScaryCards src={image} />
+          {this.state.images.map(image => {
+            return <ScaryCards key={image} src={image} handleOnClick={this.handleOnClick} />
           })}
         </main>
         <aside>
