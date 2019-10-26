@@ -47,28 +47,47 @@ class App extends React.Component {
   state = {
     score: 0,
     topScore: 0,
-    images: tileImages
+    images: tileImages,
+    pickedImages: new Set()
   };
 
-  handleOnClick = (event) => {
+  handleOnClick = (clickedImage) => {
     const imagesCopy = [...this.state.images]
     shuffle(imagesCopy);
-    this.setState({ images: imagesCopy })
+    this.setState({ images: imagesCopy });
+    const pickedImagesCopy = new Set(this.state.pickedImages);
+    if (pickedImagesCopy.has(clickedImage)) {
+      this.setState({ score: 0 });
+      this.setState({ pickedImages: new Set() })
+    } else {
+      this.setState({ score: this.state.score + 1 })
+      if (this.state.score + 1 > this.state.topScore) {
+        this.setState({ topScore: this.state.score + 1 })
+      }
+      pickedImagesCopy.add(clickedImage);
+      this.setState({ pickedImages: pickedImagesCopy });
+    }
   }
+
 
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-        </header>
         <main className="grid-container">
           {this.state.images.map(image => {
-            return <ScaryCards key={image} src={image} handleOnClick={this.handleOnClick} />
+            return <ScaryCards key={image} src={image} handleOnClick={() => {
+              this.handleOnClick(image);
+            }} />
           })}
         </main>
         <aside>
-          Jandy is coding!
+          <div className="score">
+            Score: {this.state.score}
+          </div>
+          <div className="score">
+            Top Score: {this.state.topScore}
+          </div>
         </aside>
       </div>
     );
