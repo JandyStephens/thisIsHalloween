@@ -1,3 +1,22 @@
+GAME PLAY:
+There are 16 different Halloween images displayed. Try to click all 16 without clicking the same image twice. Your current game score updates each round. The highest score you have achieved is displayed as well so you can try to beat your best score!
+
+Thanks for playing!
+
+Tech used: HTML, node.js, React, express.js, jQuery, javascript, Heroku website hosting, Bootstrap.
+
+Images were not created, or owned, by me.
+
+Please direct any questions to jandy@uw.edu.
+
+A big THANKS to Joe, Denis, Trae, Tony, Jered, and Paul for all your insight!
+
+
+----------------------------------------------------------------
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
