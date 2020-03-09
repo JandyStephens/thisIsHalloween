@@ -1,5 +1,7 @@
 GAME PLAY:
-There are 16 different Halloween images displayed. Try to click all 16 without clicking the same image twice. Your current game score updates each round. The highest score you have achieved is displayed as well so you can try to beat your best score!
+There are 12 different Halloween images displayed. Try to click all 12 without clicking the same image twice. Your current game score updates each round. The highest score you have achieved is displayed as well so you can try to beat your best score!
+
+Try it out: https://halloweenclicky.herokuapp.com/
 
 Thanks for playing!
 
