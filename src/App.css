@@ -1,29 +1,46 @@
-html, body, .App, #root {
-    height: 100%;
-    width: 100%;
+html,
+body,
+.App,
+#root {
+  height: 100%;
+  width: 100%;
 }
 
-html{
-    background-image: url("./Images/smokeBkground.jpg");
-    /* background-repeat: no-repeat; */
-    background-size: cover;
+html {
+  background-image: url("./Images/smokeBkground.jpg");
+  /* background-repeat: no-repeat; */
+  background-size: cover;
 }
 
-.grid-container{
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto;
-    margin-right: 10%
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 5%;
+  /* margin-right: 15%; */
+  /* background-color: red; */
 }
 
 .App {
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 .score {
-    font-size: 50px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: whitesmoke;
+  /* background-color: blue; */
+  font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: whitesmoke;
+  /* margin: 0% 0% 5% 0%; */
 }
 
+h3.score {
+  border: 3px solid black;
+  margin: 5% 10%;
+  box-shadow: 5px 7px 10px darkgray;
+  display: inline-block;
+}
+
+div.score {
+  padding-left: 10%;
+}

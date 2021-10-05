@@ -82,6 +82,9 @@ class App extends React.Component {
           })}
         </main>
         <aside>
+          <h3 className="score">
+            Click on each of the 12 tiles without repeating
+          </h3>
           <div className="score">
             Score: {this.state.score}
           </div>
